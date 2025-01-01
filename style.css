@@ -225,15 +225,84 @@ canvas {
 
 h1 {
   color: white;
-  font-size: 40px;
+  font-size: 90px;
 }
-.watermark {
-  position: absolute;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
+
+@media (max-width: 600px) {
+ 
+
+  .loading .bar {
+    width: 50%;  
+    height: 30px;  
+    margin: 0 auto;
+  }
+
+  
+  .center {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
 }
-.watermark h1 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 15px;
+
+.center div {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0; 
+}
+
+.center div:nth-child(1) h2,
+.center div:nth-child(3) h2 {
+    line-height: 1; 
+}
+
+
+  canvas {
+    width: 100vw;
+    height: auto;
+  }
+
+  .watermark h1 {
+    font-size: 12px;
+  }
+
+  .loading h2, .center div h2 {
+    font-size: 30px;
+  }
+
+  .loading .bar:after {
+    font-size: 15px;
+    letter-spacing: 4px;
+  }
+
+
+  .center div {
+    padding: 10px 0; 
+}
+
+.center div h2 {
+    font-size: 16px;
+}
+
+.center div:nth-child(1) h2 {
+    font-size: 40px;
+}
+
+.center div:nth-child(3) h2 {
+    font-size: 40px;
+}
+
+.center div:nth-child(1),
+.center div:nth-child(3) {
+    transform: skewY(-3deg);
+}
+
+  .loading .bar {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+  }
 }
